@@ -11,7 +11,7 @@ jobs:
     outputs:
       data: "${{steps.step_id.outputs.data_in}}"
     steps:
-      - id: steps.step_id
+      - id: step_id
         run: |
           echo "data_in=1" >> $GITHUB_OUTPUT
   job2:
@@ -20,7 +20,7 @@ jobs:
     outputs:
       data: "${{steps.step_id.outputs.data_in}}"
     steps:
-      - id: steps.step_id
+      - id: step_id
         run: |
           echo "data_in=3" >> $GITHUB_OUTPUT
 
