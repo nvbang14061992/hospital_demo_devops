@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./hopital_BE/Hospital_API
+    container_name: hospital-api
+    ports:
+      - "8080:8080" # matches Dockerfile EXPOSE 8080
+    networks:
+      - hospital-net
+
+  frontend:
+    build:
+      context: ./hospital_FE
+    container_name: hospital-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    networks:
+      - hospital-net
+
+networks:
+  hospital-net:
+    external: true
