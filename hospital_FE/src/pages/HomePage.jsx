@@ -42,7 +42,7 @@ const Home = () => {
               </p>
               <Link
                 to="/contact"
-                className="btn btn-medium btn-primary btn-pill text-uppercase"
+                className="btn btn-medium btn-warning btn-pill text-uppercase"
               >
                 Liên Hệ
               </Link>
